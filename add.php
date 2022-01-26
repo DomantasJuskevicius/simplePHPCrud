@@ -8,7 +8,7 @@ $record = [
     'email' => '',
     'phone' => '',
     'address' => '',
-    'date' => '',
+    'datetime' => '',
 ];
 
 $errors = [
@@ -16,20 +16,21 @@ $errors = [
     'email' => '',
     'phone' => '',
     'address' => '',
-    'date' => '',
+    'datetime' => '',
 ];
 $isValid = true;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $record = array_merge($record, $_POST);
+    $record = createRecord($_POST);
 
-    $isValid = validateData($record, $errors);
+    // $isValid = validateData($record, $errors);
 
-    if($isValid){
-        $record = createRecord($_POST);
+    // if($isValid){
+    //     $record = createRecord($_POST);
 
-        header("Location: index.php");
-    }
+    //     header("Location: index.php");
+    // }
 }
 ?>
 

@@ -19,18 +19,19 @@ $errors = [
     'email' => '',
     'phone' => '',
     'address' => '',
-    'date' => '',
+    'datetime' => '',
 ];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $record = array_merge($record, $_POST);
+    $record = updateRecord($_POST, $recordId);
 
-    $isValid = validateData($record, $errors);
+    // $isValid = validateData($record, $errors);
 
-    if($isValid){
-        $record = updateRecord($_POST, $recordId);
-        header("Location: index.php");
-    }
+    // if($isValid){
+    //     $record = updateRecord($_POST, $recordId);
+    //     header("Location: index.php");
+    // }
 }
 ?>
 

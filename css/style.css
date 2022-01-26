@@ -5,16 +5,24 @@
   text-decoration: none;
 }
 
-body{
-    background-color: #344a72;
-    font-family: 'Roboto', sans-serif;
+body {
+  background-color: #d6d6d6;
+  font-family: "Roboto", sans-serif;
+}
+
+.table {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .navbar {
   width: 100vw;
   height: 75px;
   border-bottom: solid 1px rgba(16, 16, 16, 0.1);
-  background-color: #3262a8;
+  background-color: #00725b;
   font-family: "Poppins";
 }
 
@@ -65,52 +73,141 @@ body{
   font-size: 20px;
 }
 
-.signup-form-form{
-    width: 360px;
-    height: 530px;
-    margin: auto;
-    background-color: white;
-    border-radius: 3px;
+.form {
+  min-height: 550px;
+}
+.signup-form-form {
+  width: 360px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
 }
 
-.signup-form-form h1{
-    text-align: center;
-    padding-top: 15px;
+.signup-form-form h1 {
+  text-align: center;
+  padding-top: 15px;
 }
 
-.signup-form-form form{
-    width: 300px;
-    margin-left: 20px;
+.signup-form-form form {
+  width: 300px;
+  margin-left: 20px;
 }
 
-.signup-form-form label{
-    display: flex;
-    margin-top: 20px;
-    font-size: 18px;
+.signup-form-form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
-.signup-form-form input{
-    width: 100%;
-    padding: 7px;
-    border: none;
-    border: 1px solid gray;
-    border-radius: 6px;
-    outline-style: none;
+.signup-form-form input {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline-style: none;
 }
 
-.signup-form-form button{
-    width: 320px;
-    height: 35px;
-    margin-top: 20px;
-    border:none;
-    background-color: turquoise;
-    border-radius: 6px;
-    font-size: 18px;
+.signup-form-form button {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: turquoise;
+  border-radius: 6px;
+  font-size: 18px;
 }
 
-.signup-form-form p{
-    text-align: center;
-    vertical-align: bottom;
-    padding-top: 20px;
-    font-size: 15px;
+.signup-form-form p {
+  text-align: center;
+  vertical-align: bottom;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-content {
+  width: 500px;
+  height: 180px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.btn-modal {
+  margin: 15px auto;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.tContainer {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tContainer thead tr {
+  background-color: #009879;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+.addButton {
+  min-width: 250px;
+  max-width: 350px;
+  height: 35px;
+  margin-top: 25px;
+  border: none;
+  background-color: turquoise;
+  border-radius: 6px;
+}
+
+.addButton li {
+  font-size: 18px;
+  color: white;
+}
+.tContainer th,
+.tContainer td {
+  padding: 12px 15px;
+}
+
+.tContainer tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.tContainer tbody tr:nth-last-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.tContainer tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
 }

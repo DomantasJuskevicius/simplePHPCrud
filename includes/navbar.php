@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Apartment cleaning</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="/JS/modal.js"></script>
 </head>
 
 <body>

@@ -1,8 +1,8 @@
 <?php
 
-function putJson($users)
+function putJson($records)
 {
-    file_put_contents(__DIR__ . '/users.json', json_encode($users, JSON_PRETTY_PRINT));
+    file_put_contents(__DIR__.'/records.json', json_encode($records, JSON_PRETTY_PRINT));
 }
 
 function getRecords(){
@@ -27,6 +27,7 @@ function getbyDate($id){
 function createRecord($data){
     $records = getRecords();
     $data['id'] = count($records) + 1;
+    // $data['id'] = rand(1000000, 2000000);
     $records[] = $data;
     putjson($records);
 
@@ -47,7 +48,15 @@ function updateRecord($data, $id){
 }
 
 function deleteRecord($id){
+    $records = getRecords();
 
+    foreach($records as $i => $record){
+        if($record['id'] == $id){
+            array_splice($records, $i, 1);
+        }
+    }
+
+    putJson($records);
 }
 
 
