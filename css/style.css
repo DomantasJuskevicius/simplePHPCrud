@@ -191,6 +191,47 @@ body {
   border-radius: 6px;
 }
 
+.filterButton{
+  min-width: 50px;
+  height: 35px;
+  margin-top: 2px;
+  background-color: #b8b7ae;
+  border-color: yellow;
+  border-width: none;
+  border-radius: 4px;
+}
+
+.tContainer button{
+  min-width: 50px;
+  height: 35px;
+  margin-top: 2px;
+  background-color: #b8b7ae;
+  border-color: yellow;
+  border-width: none;
+  border-radius: 4px;
+}
+
+.tContainer button .editButton{
+  color: #b1ab5c !important;
+}
+
+.errorText {
+  color: red;
+}
+
+.buttonContainer button{
+  color: #b1ab5c !important;
+}
+.tContainer a{
+  font-size: 14px;
+  color: white;
+}
+
+.editButton{
+  border-color: yellow;
+  border-width: 0.5px;
+}
+
 .addButton li {
   font-size: 18px;
   color: white;

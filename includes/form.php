@@ -33,7 +33,7 @@
                     <?php echo  $errors['address'] ?>
                 </div>
                 <label>When do you want it cleaned</label>
-                <input type="datetime-local" name="datetime" value="<?php echo date('Y-m-d\TH:i', strtotime($record['datetime'])) ?>" class="validation <?php echo $errors['date'] ? 'is-invalid' : '' ?>">
+                <input type="datetime-local" name="datetime" value="<?php echo date('Y-m-d\TH:i', strtotime($record['datetime'])) ?>" class="validation <?php echo $errors['datetime'] ? 'is-invalid' : '' ?>">
                 <div class="errorText">
                     <?php echo  $errors['datetime'] ?>
                 </div>
