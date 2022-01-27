@@ -25,6 +25,8 @@ function exportCSV()
     $csv = 'exportedData.csv';
     $file_pointer = fopen($csv, 'w');
     if (is_array($records)) {
+        $firstrow = array("name", "phone", "email", "address", "datetime", "id");
+        fputcsv($file_pointer, $firstrow);
         foreach ($records as $record) {
            foreach($record as $key => $value){
                if(is_array($value)){
