@@ -28,10 +28,22 @@ include_once './includes/navbar.php'
                 </form>
             </div>
             <div>
-                <form action="" method="POST" enctype="multipart/form-data">
-                    <input type="file" name="file">
-                    <input type="submit" name="upload_file" class="">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Select file to import:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload file" name="submit">
                 </form>
+            </div>
+            <div>
+                <form action="" method="POST">
+                    <label for=""> Click button to export data to csv</label>
+                    <button type="submit" value="export data" class="filterButton">EXPORT</button>
+                </form>
+                <?php
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    exportCSV();
+                }
+                ?>
             </div>
         </div>
 
@@ -56,7 +68,7 @@ include_once './includes/navbar.php'
                                 $records[] = $record;
                             }
                         }
-                        usort($records, function ($a, $b){
+                        usort($records, function ($a, $b) {
                             return $a['datetime'] <=> $b['datetime'];
                         });
                     else :

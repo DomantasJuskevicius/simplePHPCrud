@@ -5,19 +5,36 @@ function putJson($records)
     file_put_contents(__DIR__ . '/records.json', json_encode($records, JSON_PRETTY_PRINT));
 }
 
-function importCSV($file_pointer)
+function importCSV($target_file)
 {
-    $csv = file_get_contents($file_pointer);
-    $array = array_map("str_getcsv", explode("\n", $csv));
-    file_put_contents(__DIR__ . '/records.json', json_encode($array, JSON_PRETTY_PRINT));
+    if(!($filepath = fopen($target_file, 'r'))){
+        die("Cant open the file...");
+    }
+
+    $key = fgetcsv($filepath, "1024", ",");
+    $json = array();
+    while($row = fgetcsv($filepath, "1024", ",")){
+        $json[] = array_combine($key, $row);
+    }
+    fclose($filepath);
+    file_put_contents(__DIR__ . '/records.json', json_encode($json, JSON_PRETTY_PRINT));
 }
-function exportCSV($file_pointer)
+function exportCSV()
 {
     $records = getRecords();
     $csv = 'exportedData.csv';
     $file_pointer = fopen($csv, 'w');
-    foreach ($records as $record) {
-        fputcsv($file_pointer, $record);
+    if (is_array($records)) {
+        foreach ($records as $record) {
+           foreach($record as $key => $value){
+               if(is_array($value)){
+                   $record[$key] = $value[0];
+               }
+           }
+           if(is_array($record)){
+               fputcsv($file_pointer, $record);
+           }
+        }
     }
     fclose($file_pointer);
 }

@@ -1,34 +1,26 @@
 [
     {
-        "name": "Domantas Juskevicius",
-        "phone": "+37061368534",
-        "email": "juskevicius123@gmail.com",
-        "address": "Kreves pr. 11-85",
-        "datetime": "2022-01-29T16:55",
-        "id": 1
+        "Domantas Juskevicius": "Vartotojas",
+        "+37061368534": "vartotojoPastas@mail.ru",
+        "juskevicius123@gmail.com": "+37061353468",
+        "Kreves pr. 11-85": "M. Valanciaus g 16",
+        "2022-01-29T16:55": "2022-01-29T16:54",
+        "1": "2"
     },
     {
-        "name": "Vartotojas",
-        "email": "vartotojoPastas@mail.ru",
-        "phone": "+37061353468",
-        "address": "M. Valanciaus g 16",
-        "datetime": "2022-01-29T16:54",
-        "id": 2
+        "Domantas Juskevicius": "Domantas Ju\u0161kevi\u010dius",
+        "+37061368534": "juskevicius123@gmail.com",
+        "juskevicius123@gmail.com": "+37061368534",
+        "Kreves pr. 11-85": "M. Valan\u010diaus g.",
+        "2022-01-29T16:55": "2022-01-12T01:00",
+        "1": "4"
     },
     {
-        "name": "Domantas Ju\u0161kevi\u010dius",
-        "email": "juskevicius123@gmail.com",
-        "phone": "+37061368534",
-        "address": "M. Valan\u010diaus g.",
-        "datetime": "2022-01-12T01:00",
-        "id": 4
-    },
-    {
-        "name": "Domantas Ju\u0161kevi\u010dius",
-        "email": "juskevicius123@gmail.com",
-        "phone": "+37061368534",
-        "address": "M. Valan\u010diaus g.",
-        "datetime": "1970-01-01T01:00",
-        "id": 5
+        "Domantas Juskevicius": "Domantas Ju\u0161kevi\u010dius",
+        "+37061368534": "juskevicius123@gmail.com",
+        "juskevicius123@gmail.com": "+37061368534",
+        "Kreves pr. 11-85": "M. Valan\u010diaus g.",
+        "2022-01-29T16:55": "1970-01-01T01:00",
+        "1": "5"
     }
 ]
